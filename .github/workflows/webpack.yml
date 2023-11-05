@@ -29,25 +29,19 @@ jobs:
       run: |
         npm install
         npm run build
-    - name: Deploy
-        uses: JamesIves/github-pages-deploy-action@v4
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          folder: dist # The folder the action should deploy.
-          publish_dir: dist
-  #   - name: Upload build artifacts
-  #     uses: actions/upload-pages-artifact@v2
-  #     with:
-  #       path: dist
-  #       branch: master
-  #       name: build-output
-  # deploy:
-  #   runs-on: ubuntu-latest
-  #   needs: build
-  #   steps:
-  #   - name: publish
-  #     uses: peaceiris/actions-gh-pages@v3
-  #     with:
-  #       github_token: ${{ secrets.GITHUB_TOKEN }}
-  #       publish_dir: dist
-  #       folder: dist
+    - name: Upload build artifacts
+      uses: actions/upload-pages-artifact@v2
+      with:
+        path: dist
+        branch: master
+        name: build-output
+  deploy:
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+    - name: publish
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: dist
+        folder: dist
