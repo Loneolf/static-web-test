@@ -1,11 +1,15 @@
-name: NodeJS with Webpack
+name: CI
 
 on:
   push:
     branches: [ "master" ]
   pull_request:
     branches: [ "master" ]
-
+  # 允许您从“操作”选项卡手动运行此工作流
+  workflow_dispatch:
+# 设置权限（文件是可以被读写修改的）
+permissions:
+  contents: write
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -21,8 +25,11 @@ jobs:
       uses: actions/setup-node@v3
       with:
         node-version: ${{ matrix.node-version }}
-
     - name: Build
       run: |
         npm install
-        npx webpack
+        npm run build
+    - name:  Upload build artifacts
+        uses: actions/upload-pages-artifact@v2
+        with:
+          path: "./dist"
