@@ -33,7 +33,6 @@ jobs:
       uses: actions/upload-pages-artifact@v2
       with:
         path: "./dist"
-        branch: "master"
         name: "build-output"
   deploy:
     runs-on: ubuntu-latest
@@ -44,4 +43,3 @@ jobs:
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         publish_dir: "./dist"
-        folder: "./dist"
