@@ -42,7 +42,7 @@ jobs:
     - name: publish
       uses: peaceiris/actions-gh-pages@v3
       with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
+        github_token: ${{ secrets.ACCESS_TOKEN }}
         branch: master
         publish_dir: docs
         folder: docs
