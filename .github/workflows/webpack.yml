@@ -32,7 +32,7 @@ jobs:
     - name: Upload build artifacts
       uses: actions/upload-pages-artifact@v2
       with:
-        path: dist
+        path: docs
         branch: master
         name: build-output
   deploy:
@@ -43,5 +43,5 @@ jobs:
       uses: peaceiris/actions-gh-pages@v3
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: dist
-        folder: dist
+        publish_dir: docs
+        folder: docs
