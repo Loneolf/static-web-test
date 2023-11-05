@@ -24,6 +24,7 @@ root.render(
                 },
             }}
         >
+            {/* <BrowserRouter basename='/static-web-test'> */}
             <BrowserRouter>
                 <App />
             </BrowserRouter>

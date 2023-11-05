@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 
 export default function About() {
 	useEffect(() => {
+		return
     // 接口请求
 		fetch("/api/hello")
 			.then((res) => res.text())
