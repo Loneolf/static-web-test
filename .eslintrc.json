@@ -1,7 +1,8 @@
 {
     "env": {
         "browser": true,
-        "es2021": true
+        "es2021": true,
+        "NODE_ENV": "production"
     },
     "extends": "react-app",
     "parserOptions": {
@@ -14,6 +15,5 @@
         "import/extensions": 0,
         "import/no-extraneous-dependencies": 0,
         "no-console": 0
-        // "no-sparse-arrays": 0
     }
 }
