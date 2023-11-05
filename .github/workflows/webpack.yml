@@ -32,7 +32,9 @@ jobs:
     - name: Upload build artifacts
       uses: actions/upload-pages-artifact@v2
       with:
-        path: "./docs"
+        path: "./dist"
+        branch: "master"
+        name: "build-output"
   deploy:
     runs-on: ubuntu-latest
     needs: build
@@ -41,4 +43,4 @@ jobs:
       uses: peaceiris/actions-gh-pages@v3
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./docs
+        publish_dir: "./dist"
