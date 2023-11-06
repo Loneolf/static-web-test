@@ -6,7 +6,7 @@ const CopyPlugin = require("copy-webpack-plugin");
 
 module.exports = {
 	output: {
-		path: path.resolve(__dirname, "../docs"),
+		path: path.resolve(__dirname, "../dist"),
 		clean: true,
 		filename: "js/[name]_[contenthash:10].js",
 		chunkFilename: "js/[name].chunk.js",
@@ -23,7 +23,7 @@ module.exports = {
 			patterns: [
 				{
 					from: path.resolve(__dirname, "../public"),
-					to: path.resolve(__dirname, "../docs"),
+					to: path.resolve(__dirname, "../dist"),
 					globOptions: {
 						// 忽略index.html文件
 						ignore: ["**/index.html"],
