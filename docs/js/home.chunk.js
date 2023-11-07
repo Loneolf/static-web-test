@@ -1,2 +1,2 @@
-"use strict";(self.webpackChunksource_map=self.webpackChunksource_map||[]).push([[177],{9503:(e,o,s)=>{s.r(o),s.d(o,{default:()=>u});var c=s(5893);const l={homeTitle:"index_homeTitle_oScuBv"};function u(){return console.log(l),(0,c.jsx)("h1",{className:l.homeTitle,children:"Home~~~18"})}}}]);
+"use strict";(self.webpackChunksource_map=self.webpackChunksource_map||[]).push([[177],{9503:(e,s,c)=>{c.r(s),c.d(s,{default:()=>t});var u=c(5893);const o={homeTitle:"index_homeTitle_oScuBv"};function t(){return(0,u.jsx)("h1",{className:o.homeTitle,children:"Home"})}}}]);
 //# sourceMappingURL=home.chunk.js.map
