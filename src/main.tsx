@@ -8,7 +8,6 @@ import store from './store';
 import App from './app'
 
 const root = ReactDOM.createRoot(document.querySelector('#app')!)
-console.log('aaa233', document.querySelector('#app'))
 root.render(
     <Provider store={store}>
         <ConfigProvider 
@@ -24,8 +23,7 @@ root.render(
                 },
             }}
         >
-            <BrowserRouter basename='/static-web-test'>
-            {/* <BrowserRouter> */}
+            <BrowserRouter basename={process.env.NODE_ENV === 'development' ? '' : '/static-web-test'}>
                 <App />
             </BrowserRouter>
         </ConfigProvider>
