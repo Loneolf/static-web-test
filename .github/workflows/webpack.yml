@@ -35,6 +35,8 @@ jobs:
         npm run build
     - name: Commit and push
       run: |
+        git config --global user.email "qinghaoqin@163.com"
+        git config --global user.name "loneolf"
         git add dist/*
         git commit -m "Deploy build artifact"
         git push origin master
