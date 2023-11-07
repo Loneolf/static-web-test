@@ -3,5 +3,5 @@ import style from "./index.scss";
 
 export default function Home() {
   console.log(style)
-  return <h1 className={style.homeTitle}>Home~~~6</h1>;
+  return <h1 className={style.homeTitle}>Home~~~7</h1>;
 }
